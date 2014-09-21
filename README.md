@@ -32,10 +32,10 @@ The config object
 
 **summaryTemplate** - String representing the template for generating summary of the current paginator state. Possible keys that the paginator factory recognizes are:
 
-*{start} - The start record index for the current page
-*{end} - The end record index for the current page
-*{currentPage} - The current page
-*{recordCount} - The record count
+- {start} - The start record index for the current page
+- {end} - The end record index for the current page
+- {currentPage} - The current page
+- {recordCount} - The record count
 
 **onChange** - Function that is executed whenever the paginator changes state. The function should expect (start, end, currentPage, pageSize). Where start and end are the indexes in the original records list where the paginator currently looks at.
 
