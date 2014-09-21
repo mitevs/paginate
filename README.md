@@ -9,12 +9,12 @@ The paginator factory is able to producte paginator controller with various conf
 
 This is the way you need to use the factory in order to create paginator controller:
 
-`
+```
 var module = ng.module('MainApp', ['paginate']);
 
 module.controller('MainCtrl', ['$scope', 'paginatorFactory', function($scope, paginatorFactory){
 	$scope.paginator = paginatorFactory.createPaginator(config);
 }]);
-`
+```
 
 Where config is the object used by the factory to configure the new paginator controller instance.
