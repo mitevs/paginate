@@ -1,0 +1,30 @@
+<div class="paginate">
+	<ul class="paginate-pages">
+		<li class="paginate-page"
+			ng-class="{'disabled': paginator.onFirstPage}"
+			ng-click="paginator.loadFirstPage();">first</li>
+
+		<li class="paginate-page"
+			ng-class="{'disabled': paginator.onFirstPage}" 
+			ng-click="paginator.loadPreviousPage();">previous</li>
+
+		<li class="paginate-page"
+			ng-repeat="page in paginator.pages" 
+			ng-click="paginator.loadPage(page)"
+			ng-class="{'active': page === paginator.currentPage}"
+			ng-bind="page + 1"></li>
+
+		<li class="paginate-page"
+			ng-class="{'disabled': paginator.onLastPage}"
+			ng-click="paginator.loadNextPage();">next</li>
+
+		<li class="paginate-page"
+			ng-class="{'disabled': paginator.onLastPage}"
+			ng-click="paginator.loadLastPage();">last</li>
+	</ul>
+
+	<select ng-if="paginator.sizeChangable" class="paginate-size-selector" 
+		ng-model="paginator.pageSize" 
+		ng-options="pageSize for pageSize in paginator.pageSizes">
+	</select> 
+</div>

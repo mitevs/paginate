@@ -1,0 +1,25 @@
+.table-wrapper{
+	width: 960px;
+	margin: 0 auto;
+}
+
+.user-table{
+	width: 100%;
+	border-collapse: collapse;
+}
+
+.user-table td{
+	text-align: center;
+	padding: 5px;
+	border-bottom: 1px solid #e6e6e6;
+}
+
+.user-table tbody tr:nth-child(odd) td{
+	background: #efefef;
+}
+
+.user-table td.user-table-header {
+	background: #555;
+	color: #fff;
+	padding: 10px;
+}

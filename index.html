@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Paginate Example</title>
+	<link rel="stylesheet" href="css/main.css">
+	<link rel="stylesheet" href="css/paginate/paginate.css">
+</head>
+<body ng-app="MainApp" ng-controller="MainCtrl">
+	<div class="table-wrapper">
+		<table class="user-table">
+			<thead>
+				<td class="user-table-header">Username</td>
+				<td class="user-table-header">Email</td>
+				<td class="user-table-header">Phone</td>
+				<td class="user-table-header">First Name</td>
+				<td class="user-table-header">Last Name</td>
+			</thead>
+			<tbody>
+				<tr ng-repeat="user in usersView">
+					<td class="user-table-data" ng-bind="user.userName"></td>
+					<td class="user-table-data" ng-bind="user.userEmail"></td>
+					<td class="user-table-data" ng-bind="user.userPhone"></td>
+					<td class="user-table-data" ng-bind="user.firstName"></td>
+					<td class="user-table-data" ng-bind="user.lastName"></td>
+				</tr>
+			</tbody>
+		</table>
+
+		<h5 ng-bind="paginator.summary();"></h5>
+		<paginator paginator-controller="paginator"></paginator>
+	</div>
+
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.25/angular.min.js"></script>
+	<script src="js/paginate/paginate.js"></script>
+	<script src="js/main.js"></script>
+</body>
+</html>
